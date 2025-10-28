@@ -78,7 +78,7 @@ public:
   char add(int x)
   {
     _count++;
-    _value = DAMM[_value][x];
+    _value = _dammMatrix[_value][x];
     return _value + '0';
   }
 
@@ -86,7 +86,7 @@ public:
   char add(char c)
   {
     _count++;
-    _value = DAMM[_value][c - '0'];
+    _value = _dammMatrix[_value][c - '0'];
     return _value + '0';
   }
 
@@ -100,10 +100,9 @@ protected:
   int       _value = 0;
   uint32_t  _count = 0;
 
-  //  DAMM matrix.
   //  PROGMEM ?
   //  2 digits in 1 byte?
-  uint8_t DAMM[10][10] =
+  uint8_t _dammMatrix[10][10] =
   {
     {0, 3, 1, 7, 5, 9, 8, 6, 4, 2},
     {7, 0, 9, 2, 1, 5, 4, 8, 6, 3},
