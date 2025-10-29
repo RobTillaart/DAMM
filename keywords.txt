@@ -2,6 +2,7 @@
 
 # Data types (KEYWORD1)
 DAMM	KEYWORD1
+DAMM_small	KEYWORD1
 
 
 # Methods and Functions (KEYWORD2)
